@@ -1,0 +1,25 @@
+
+<p>
+  The order by example
+</p>
+
+<section class="row m-a">
+	<h3>Multi-Dimensional Arrays</h3>
+	<div class="col-sm-4 col-md-4">
+  	<table id="elementsPeriodic">
+  	  <thead>
+  	     <tr>
+  	      <th *ngFor="let column of displayedColumns" (click)= "sortByCol(column)">{{column}}</th>
+  	     </tr>
+  	  </thead>
+  	  <tbody>
+  	    <tr *ngFor="let element of ELEMENT_DATA | orderBy : order">
+  	      <td>{{element.position}}</td>
+  	      <td>{{element.name}}</td>
+  	      <td>{{element.weight}}</td>
+          <td>{{element.symbol}}</td>
+  	    </tr>
+  	  </tbody>
+  	</table>
+	</div>
+</section>
